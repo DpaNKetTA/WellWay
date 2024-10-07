@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Login Page in WellWay</title>
+  <link rel="stylesheet" href="/static/prudgect/css/prost.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head> 
+<body>
+<div class="form_auth_block">
+    <div class="form_auth_block_content">
+    <p class="form_auth_block_head_text">Вход</p>
+
+    <form class="form_auth_style" action="{% url 'users:login' %}" method="post">
+    {% csrf_token %}
+      <labe>Войти с помощью логина</labe>
+        
+      <div class="input_login_block1">
+        {{form.username}}
+      </div>
+
+   
+        
+        
+      <div class="input_login_block">
+          {{form.password}}
+      </div>
+        
+      <div class="remember-me--forget-password">
+      <label>
+        <input type="checkbox" name="item" class="real-checkbox" />
+          <span class="custom-checkbox"></span>
+              <c>Запомнить меня</c>
+      </label>
+    
+        <p><a href="prost1.html" style="font-weight: bold;" style="color: #737373;">Забыли пароль?</a></p>
+        
+      </div>
+        
+      <button class="form_auth_button" type="submit" name="form_auth_submit"><b>Войти</b></button>
+      <labe>или через соцсети</labe>
+      
+      <a href=https://ya.ru><img src="/static/prudgect/css/img/yandex.svg" alt='' width = '37,5px' title='Яндекс'/></a>
+      <a href='https://vk.com/yandex'><img src="/static/prudgect/css/img/vk.svg" alt='' width = '37,5px' title='ВКонтакте'/></a>
+      
+      
+
+       <p><c><span style="color: black;">Нет аккаунта? </span></c><a href=" {% url 'users:register' %} "  style="color: #737373;"> Зарегистрироваться</a></p>
+    
+        
+    </form>
+    </div>
+</div>
+</body>
+</html>

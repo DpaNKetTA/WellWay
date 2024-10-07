@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <title>Registration in WellWay</title>
+  <link rel="stylesheet" href="/static/prudgect/css/prost0.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head> 
+<body>
+<div class="form_auth_block">
+    <div class="form_auth_block_content">
+    <p class="form_auth_block_head_text">Регистрация</p>
+
+    <form class="form_auth_style" action="{% url 'users:register' %}" method="post">
+      {% csrf_token %}
+      <labe>Введите Ваше имя</labe>
+        
+      <div class="input_login_block">
+        {{ form.username }}
+      </div>
+      <labe>Введите Ваш Е-mail</labe>
+        
+      <div class="input_login_block">
+        {{form.email}}
+      </div>
+
+      <labe>Пароль</labe>
+        
+      <div class="input_login_block0">
+        {{form.password1}}
+      </div>
+        
+      <labe>Подтвердите пароль</labe>
+        
+      <div class="input_login_block0">
+        {{form.password2}}
+      </div>
+    
+      <div class="register">
+      <button class="form_auth_button" type="submit" name="form_auth_submit">               <b>Зарегистрироваться</b></button>
+      </div>
+      
+        
+    </form>
+    </div>
+</div>
+</body>
+</html>

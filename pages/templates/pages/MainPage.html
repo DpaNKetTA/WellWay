@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Well Way</title>
+  <link rel="stylesheet" href="/static/vendor/css/MP_css/MP_head.css">
+  <link rel="stylesheet" href="/static/vendor/css/MP_css/MP_sections.css">
+  <link rel="stylesheet" href="/static/vendor/css/MP_css/MP_whyWW.css">
+  <link rel="stylesheet" href="/static/vendor/css/MP_css/MP_features.css">
+  <link rel="stylesheet" href="/static/vendor/css/MP_css/MP_routes.css">
+  <link rel="stylesheet" href="/static/vendor/css/MP_css/MP_contact.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="/static/vendor/scripts/script_MP.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+
+      <div class="header">
+        <div class="nav">
+          <div class="ul">
+            <li><a href="#why-well-way">О нас</a></li>
+            <li><a href="#routes">Маршруты</a></li>
+            <li><a href="{% url 'users:login' %}">Аккаунт</a></li>
+          </div>
+        </div>
+      </div>
+
+
+      <h1>Well Way</h1>
+      <p>Путешествие со смыслом</p>
+      <p>Ростов - на - Дону</p>
+      <p>Cкорее садись на велосипед и получай незабываемое удовольствие</p>
+      <a href="#routes" class="cta">к маршрутам</a>
+
+    </section>
+  </main>
+    <section class="sections" id="sections">
+
+     <section class="section-1">
+       <div class="image-container">
+         <img src="/static/vendor/svg/svg_MP/полукруг 1.svg" alt="Bicycle">
+       </div>
+       <section class="content1">
+         <h2>Польза от катания------------</h2>
+         <p>Катание на велосипеде является отличным способом улучшить физическую
+             форму и здоровье. Это отличная кардио-нагрузка, которая помогает
+              укрепить сердечно-сосудистую систему, улучшить выносливость,
+               сжигать калории и улучшить общую физическую форму.
+            Кроме того, катание на велосипеде способствует улучшению
+             координации движений, укреплению мышц ног, ягодиц,
+              спины и живота. Это отличный способ расслабиться,
+               снять стресс и улучшить эмоциональное состояние.</p>
+         </section>
+     </section>
+
+     <section class="section-2">
+       <div class="image-container">
+         <img src="/static/vendor/svg/svg_MP/полукруг2.svg" alt="City" class="citySection-2">
+       </div>
+       <section class="content2">
+         <h2>------Город мечты</h2>
+         <p>В Ростове-на-Дону можно увидеть множество архитектурных памятников,
+             таких как доходные и торговые дома, особняки и храмы.
+              Многие здания сочетают в себе различные стили,
+               что было популярно в конце 19 века. Также вас ждут красивые
+                парковые зоны, которыми точно стоит полюбоваться.
+            Особенно стоит выделить набережную реки Дон. Здесь
+            довольно много развлечений и много народу, в особенности в теплое
+             время года. Атмосфера набережной влюбляет в себя, а вид на водную
+             гладь завораживает.</p>
+         </section>
+     </section>
+
+     <section class="section-3">
+       <div class="image-container">
+         <img src="/static/vendor/svg/svg_MP/полукруг3.svg" alt="Landscape">
+       </div>
+       <section class="content1">
+         <h2>Наслаждайся моментом------------</h2>
+         <p>Почувствуйте себя свободными и сильными, покоряйте новые вершины
+             и преодолейте препятствия с улыбкой на лице. Вдохните свежий воздух,
+              наслаждайтесь окружающей природой и заряжайтесь энергией от каждого
+               кручения педалей. Велопрогулки - это не просто спорт, это искусство
+                расширения новых горизонтов, погружение в себя и гармония с
+                окружающим миром. Мы можем долго рассказывать вам о пользе от
+                 катания на велосипеде, но почему бы вам не проверить это самим?
+                  Отправляйтесь в увлекательное путешествие на велосипеде,
+                   познайте себя и окружающий вас мир,  дайте своей душе
+                   возможность свободно расправить крылья!</p>
+         </section>
+     </section>
+   </section>
+
+   <section class="why-well-way" id="why-well-way">
+        <div class="whyWW">
+          <h2>Почему Well Way?</h2>
+          <p>Давайте совместим приятное с полезным, а наш сайт в этом поможет!
+             Специально для вас мы подобрали самые живописные и интересные
+              маршруты по Ростову-на-Дону. Маршруты варьируются по сложности:
+               от самых легких для тех, кто настроен на простую велопрогулку
+                без лишнего напряжения, до самых трудных для тех, кто намерен
+                 испытать себя. Мы также отметили на карте точки проката,
+                  шиномонтажа и точки питания, чтобы ваше путешествие не омрачали
+                   никакие трудности. Well Way - самый удобный сайт для подбора
+                    велосипедных маршрутов. Отправляйтесь в путь и убедитесь
+                     в этом сами!</p>
+        </div>
+    </section>
+
+    <div class="Feautures" id="Feautures">
+        <div class="item">
+            <div class="icon"><img src="/static/vendor/svg/svg_MP/map.svg" alt="Локация"></div>
+            <div class="TextF">
+             <h2>Комфортные маршруты</h2>
+             <p>Мы уже подобрали для вас несколько разных маршрутов по городу и это только начало! Вскоре мы добавим еще больше  путей с разными уровнями сложности, чтобы точно нашли тот маршрут, который будет вам по душе.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon"><img src="/static/vendor/svg/svg_MP/tire.svg" alt="Колесо"></div>
+            <div class="TextF">
+             <h2>Шиномонтаж</h2>
+             <p>К большому сожалению, не каждое путешествие проходит гладко. Непредвиденные проблемы никто не отменял. По этому, специально для таких случаев, на карте нами отмечены точки шиномонтажа. Теперь вы без проблем найдете сервис и сможете починить свой велосипед.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon"><img src="/static/vendor/svg/svg_MP/rest-area.svg" alt="Диван"></div>
+            <div class="TextF">
+              <h2>Места отдыха</h2>
+              <p>Проводить все время в дороге и крутить педали – крайне сложно. Мы это понимаем. По этому также отметили для вас специальные места, где вы можете немного отдохнуть, перевести дух, подкрепиться и в спокойном темпе насладиться пейзажем вокруг.</p>
+            </div>
+        </div>
+    </div>
+
+  <section class="routes" id="routes">
+    <div class="options" >
+      <div class="option active"data-url="{% url 'Route_1' %}" style="Background:url('/static/vendor/svg/svg_MP/route1.svg');background-size: cover;">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <i class="fas fa-walking"></i>
+            </div>
+            <div class="info">
+               <div class="main">ПРАВЫЙ БЕРЕГ ДОНА </div>
+               <div class="sub">★☆☆☆☆</div>
+            </div>
+         </div>
+      </div>
+      <div class="option"data-url="{% url 'Route_2' %}" style="Background:url('/static/vendor/svg/svg_MP/route2.svg');background-size: cover;">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <i class="fas fa-snowflake"> </i>
+            </div>
+            <div class="info">
+               <div class="main">ЗЕЛЕНЫЕ ТРОПЫ</div>
+               <div class="sub">★★☆☆☆</div>
+            </div>
+         </div>
+      </div>
+      <div class="option"data-url="{% url 'Route_3' %}" style="Background:url('/static/vendor/svg/svg_MP/route3.svg');background-size: cover;">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <i class="fas fa-tree"></i>
+            </div>
+            <div class="info">
+               <div class="main">ОТ ПУШКИНА ДО РЕВОЛЮЦИИ</div>
+
+               <div class="sub">★★★☆☆</div>
+            </div>
+         </div>
+      </div>
+      <div class="option"data-url="{% url 'Route_4' %}" style="Background:url('/static/vendor/svg/svg_MP/route4.svg');background-size: cover;">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <i class="fas fa-tint"></i>
+            </div>
+            <div class="info">
+               <div class="main">Гребной канал</div>
+               <div class="sub">★★★★☆</div>
+            </div>
+         </div>
+      </div>
+      <div class="option"data-url="{% url 'Route_5' %}" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);background-size: cover;">
+         <div class="shadow"></div>
+         <div class="label">
+            <div class="icon">
+               <i class="fas fa-sun"></i>
+            </div>
+            <div class="info">
+               <div class="main">Левый берег Дона</div>
+               <div class="sub">★★★★★</div>
+            </div>
+         </div>
+      </div>
+   </div>
+  </section>
+
+  <script>
+   // Получаем все элементы с классом "segment"
+   const segments = document.querySelectorAll('.option');
+
+   segments.forEach(segment => {
+       segment.addEventListener('click', function() {
+           // Проверяем, активен ли сегмент
+           if (this.classList.contains('active')) {
+               // Если активен, делаем переход на URL, указанный в data-url
+               window.location.href = this.getAttribute('data-url');
+           } else {
+               // Если не активен, добавляем класс активности
+               this.classList.add('active');
+           }
+       });
+   });
+</script>
+  <div class="conatacts">
+    <div class="container">
+        <h1>Контакты</h1>
+        <div class="content">
+            <div class="contact-details">
+                <p>Ростовская область,<br>г. Таганрог, улица<br>Чехова 2<br>+7 (999) 245-22-10</p>
+
+            </div>
+
+            <div class="map">
+               <a href=" https://yandex.ru/maps/971/taganrog/house/ulitsa_chekhova_2/Z0EYfwNjQEQAQFptfX5xcnVnbA==/?ll=38.943917%2C47.203948&z=17.2" target="_blank">
+                  <img src="/static/vendor/svg/svg_MP/chehova.svg" alt="Map">
+               </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </main>
+
+
+</body>
+</html>

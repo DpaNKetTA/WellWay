@@ -1,0 +1,65 @@
+.Feautures {
+    background:#FFFFF0;
+    padding-top: 7%;
+  }
+  .item{
+    padding-top: 3%;
+    padding-left: 13%;
+    padding-right: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width:70%; /* Устанавливает ширину элемента на 80% от родительского контейнера */
+    margin: 0 auto; /* Центрирует элемент с равными отступами слева и справа */
+  }
+  .TextF {
+    background-image: linear-gradient(to bottom,
+    rgb(249,248,221) 95%,
+    rgba(241, 239, 192, 0.39) ,
+    rgb(225,224,206) 30%);
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+
+  .Feautures .icon {
+    width: 80%; /* Ширина контейнера, может быть любая */
+    margin: 0 auto; /* Центрирование контейнера */
+  }
+
+  .Feautures .icon img {
+    width: 75%;
+    height: auto;
+    max-width: 100%
+  }
+  .icon{
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .Feautures .item:nth-child(2) .icon {
+    /* Например, изменим размер изображения и добавим отступы */
+    width: 100%;
+  }
+  .Feautures .item:nth-child(3) .icon {
+    /* Например, изменим размер изображения и добавим отступы */
+    width: 92%;
+  }
+
+  .Feautures h2 {
+    display:flex;
+    align-items: center;
+    font-family:Comfortaa;
+    font-size: 2.5vw;
+
+  }
+
+  .Feautures p {
+    text-align: center;
+    font-family:Manrope;
+    font-size: 1.5vw;
+  }

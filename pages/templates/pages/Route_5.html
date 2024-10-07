@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Левый берег Дона</title>
+  <link rel="stylesheet" href="/static/vendor/css/R5_css/Route5_head.css">
+  <link rel="stylesheet" href="/static/vendor/css/R5_css/Route5_difficult.css">
+  <link rel="stylesheet" href="/static/vendor/css/R5_css/Route5_sections.css">
+  <link rel="stylesheet" href="/static/vendor/css/R5_css/Route5_feedback.css">
+  <link rel="stylesheet" href="/static/vendor/css/R5_css/Route5_down.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <sectioen class="hero">
+
+
+      <h1>Левый берег<br> Дона</h1>
+
+
+    </section>
+
+
+
+  </main>
+  <div class="difficulty-rating">
+    <p>Сложность</p>
+    <div class="stars">
+        ★★★★★
+    </div>
+</div>
+    <section class="sections" id="sections">
+
+     <section class="section-1">
+       <div class="image-container">
+         <img src="/static/vendor/svg/полукруг1.svg" alt="Bicycle">
+       </div>
+       <section class="content1">
+         <h2>01</h2>
+
+         <p>Центральный пляж - благодаря своему положению получил звучное название «Левбердон». Полоса из мягкого золотистого песка протянулась на километр вдоль левого берега Дона и парка Левобережный, недалеко от Ворошиловского моста.  Для отдыха на берегу пляж официально разрешен и частично оборудован.</p>
+        </section>
+     </section>
+
+     <section class="section-2">
+       <div class="image-container">
+         <img src="/static/vendor/svg/полукруг2.svg" alt="City" class="citySection-2">
+       </div>
+       <section class="content2">
+         <h2>02</h2>
+         <p> «Ростов Арена» - крупнейший спортивный объект в Ростовской области и входит в тройку самых посещаемых стадионов России.. За последнее время он стал культовым местом в регионе, собирающим жителей разных социальных групп населения. Белоснежная кровля на фоне величественной реки на эскизном проекте выглядит впечатляюще.</p>
+         </section>
+     </section>
+
+     <section class="section-3">
+       <div class="image-container">
+         <img src="/static/vendor/svg/полукруг3.svg" alt="Landscape">
+       </div>
+       <section class="content1">
+         <h2>03</h2>
+         <p>Музей виноделия и Донского самогоноварения: Музей находится на территории этнографического комплекса Станица Черкасская, который выполнен в стиле казачьих куреней 18-19 ВВ. В музее виноделия представлены заводы изготовители алкогольной продукции по Южному федеральному округу.</p>
+         </section>
+     </section>
+
+     <section class="section-4">
+      <div class="image-container">
+        <img src="/static/vendor/svg/полукруг4.svg" alt="Landscape">
+      </div>
+      <section class="content2">
+        <h2>04</h2>
+        <p>Вера.Надежда.Любовь - арт-объект был открыт осенью 2022 года в парке Левобережном.По задумке волонтёров, которые и воплотили совместно со спонсорами этот проект, эти три важных слова станут еще одним символом Ростова-на-Дону и отличной фотозоной с видом на красивый правый берег Дона.</p>
+        </section>
+    </section>
+
+   </section>
+
+   <div class="feedback">Ваши отзывы</div>
+   <div class="review-wrapper">
+
+    <div class="review-section">
+      <button class="arrow left" id="prevArrow">←</button>
+      <div class="review-container" id="review-0">
+          <div class="avatar">
+              <img src="https://via.placeholder.com/75" alt="Avatar">
+          </div>
+          <div class="review-content">
+              <div class="review-name">Евгения</div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">Сайт значительно облегчает жизнь любителям покататься! Жду новые маршруты!</div>
+          </div>
+      </div>
+      <div class="review-container" id="review-1">
+          <div class="avatar">
+              <img src="https://via.placeholder.com/50" alt="Avatar">
+          </div>
+          <div class="review-content">
+              <div class="review-name">Иван</div>
+              <div class="review-stars">★★★★☆</div>
+              <div class="review-text">Отличный ресурс, но хотелось бы больше маршрутов по моему региону.</div>
+          </div>
+      </div>
+      <div class="review-container" id="review-2">
+          <div class="avatar">
+              <img src="https://via.placeholder.com/50" alt="Avatar">
+          </div>
+          <div class="review-content">
+              <div class="review-name">Ольга</div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">Прекрасный сервис, маршруты всегда интересные и разнообразные.</div>
+          </div>
+      </div>
+      <button class="arrow right" id="nextArrow">→</button>
+  </div>
+</div>
+<div class="down">
+  <div class="button-container">
+      <a href="{% url 'MainPage' %}" class="button">На главную страницу</a>
+      <a href="{% url 'Add_Review' %}" class="button">Оставить отзыв</a>
+      <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.722303%2C47.226162&mode=routes&rtext=47.221457%2C39.697184~47.223892%2C39.709577~47.227519%2C39.726670~47.230440%2C39.740532~47.229449%2C39.742768~47.230342%2C39.747503~47.230624%2C39.744564~47.230408%2C39.739637~47.221459%2C39.697184&rtt=sc&ruri=~~~~~~~~&z=15" class="button">Отправиться в путь</a>
+
+  </div>
+
+<script>
+  // Текущий индекс отзыва
+  let currentReviewIndex = 0;
+  const reviews = document.querySelectorAll('.review-container');
+  const totalReviews = reviews.length;
+
+  // Элементы кнопок
+  const prevArrow = document.getElementById('prevArrow');
+  const nextArrow = document.getElementById('nextArrow');
+
+  // Показать отзыв по индексу
+  function showReview(index) {
+      reviews.forEach((review, i) => {
+          review.classList.remove('active');
+          if (i === index) {
+              review.classList.add('active');
+          }
+      });
+  }
+
+  // Обновляем видимость кнопок в зависимости от текущего индекса
+  function updateArrowVisibility() {
+      prevArrow.disabled = currentReviewIndex === 0;
+      nextArrow.disabled = currentReviewIndex === totalReviews - 1;
+  }
+
+  // Инициализация первого отзыва и стрелок
+  showReview(currentReviewIndex);
+  updateArrowVisibility();
+
+  // Слушатели событий для стрелок
+  prevArrow.addEventListener('click', () => {
+      if (currentReviewIndex > 0) {
+          currentReviewIndex--;
+          showReview(currentReviewIndex);
+          updateArrowVisibility();
+      }
+  });
+
+  nextArrow.addEventListener('click', () => {
+      if (currentReviewIndex < totalReviews - 1) {
+          currentReviewIndex++;
+          showReview(currentReviewIndex);
+          updateArrowVisibility();
+      }
+  });
+</script>
+</body>
+</html>
