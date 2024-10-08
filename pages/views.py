@@ -52,7 +52,6 @@ def add_review(request):
                 review = form.save(commit=False)
                 review.user = request.user
                 review.save()
-                print('qwerty')
                 return redirect('Route_1')
 
         elif selected_route == 'Маршрут 2':
@@ -63,7 +62,6 @@ def add_review(request):
                 review = form.save(commit=False)
                 review.user = request.user
                 review.save()
-                print('qwerty')
                 return redirect('Route_2')
 
         elif selected_route == 'Маршрут 3':
@@ -101,7 +99,6 @@ def add_review(request):
 
     else:
         form = ReviewForm()
-        print('asdfasdf')
 
     return render(request, 'pages/html3.html', {'form': form})
 

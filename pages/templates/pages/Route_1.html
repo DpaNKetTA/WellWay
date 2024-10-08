@@ -96,6 +96,7 @@
    <div class="feedback">
        Ваши отзывы
    </div>
+
    <div class="review-wrapper">
 
     <div class="review-section">
@@ -116,10 +117,11 @@
               <div class="review-stars">
                   {% for i in stars_range %}
                     {% if i <= review.rating %}
-                        &#9733;  <!-- Заполненная звезда -->
+                        <span class="empty-star">★</span>
+                        <!-- Заполненная звезда -->
                     {% else %}
                         <span class="empty-star">☆</span> <!-- Пустая звезда -->
-                    {% endif %}
+                  {% endif %}
                   {% endfor %}
               </div>
               <div class="review-text">{{review.comment}}</div>
@@ -131,7 +133,9 @@
 
       <button class="arrow right" id="nextArrow">→</button>
   </div>
+
 </div>
+
 <div class="down">
   <div class="button-container">
       <a href="{% url 'MainPage' %}" class="button">На главную страницу</a>

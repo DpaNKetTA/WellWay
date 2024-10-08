@@ -119,7 +119,7 @@
             cursor: pointer;
         }
 
-        /* Star hover and selection */
+        /* Star hover and selection
         .stars label:hover, .stars label:hover ~ label {
             color: gold;
         }
@@ -127,6 +127,7 @@
         .stars input:checked ~ label {
             color: gold;
         }
+        */
 
         .image-upload {
             text-align: center;
@@ -209,16 +210,16 @@
             <div class="input-group">
     <label>Оценка</label>
     <div class="stars">
-        <input type="radio" id="star5" name="rating" value="5" {% if form.rating.value == "5" %}checked{% endif %}>
-        <label for="star5">&#9733;</label>
-        <input type="radio" id="star4" name="rating" value="4" {% if form.rating.value == "4" %}checked{% endif %}>
-        <label for="star4">&#9733;</label>
-        <input type="radio" id="star3" name="rating" value="3" {% if form.rating.value == "3" %}checked{% endif %}>
-        <label for="star3">&#9733;</label>
-        <input type="radio" id="star2" name="rating" value="2" {% if form.rating.value == '2' %} checked{% endif %}>
-        <label for="star2">&#9733;</label>
         <input type="radio" id="star1" name="rating" value="1" {% if form.rating.value == "1" %}checked{% endif %}>
         <label for="star1">&#9733;</label>
+        <input type="radio" id="star2" name="rating" value="2" {% if form.rating.value == "2" %}checked{% endif %}>
+        <label for="star2">&#9733;</label>
+        <input type="radio" id="star3" name="rating" value="3" {% if form.rating.value == "3" %}checked{% endif %}>
+        <label for="star3">&#9733;</label>
+        <input type="radio" id="star4" name="rating" value="4" {% if form.rating.value == '4' %} checked{% endif %}>
+        <label for="star4">&#9733;</label>
+        <input type="radio" id="star5" name="rating" value="5" {% if form.rating.value == "5" %}checked{% endif %}>
+        <label for="star5">&#9733;</label>
     </div>
 </div>
 
