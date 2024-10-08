@@ -1,0 +1,26 @@
+/*СТИЛЬ СЕКЦИИ БАШКА*/
+
+
+
+
+.hero {
+  color:white;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R4/маршрут4.svg');
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+
+.hero h1 {
+  font-family: 'Comfortaa' ;
+  text-align: center;
+  font-size:8rem;
+  margin-bottom: 0%;
+  margin-left: 31%;
+  margin-bottom: 10%;
+
+}

@@ -1,0 +1,57 @@
+
+  .conatacts {
+    padding-left: 15%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    background-color: #7FAB5C;
+
+  }
+
+  .container h1 {
+    font-size: 4.5vw;
+    font-family:'Comfortaa';
+    text-align: center;
+    transform: translateX(-15%); /* Move the h1 10% to the left */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .contact-details {
+    padding-top: 20%;
+    font-size: 1.2vw;
+    font-family:'Manrope';
+    color: white;
+  }
+
+
+  .contact-details .phone-number {
+    margin: 30px; /* Add extra space above the phone number */
+  }
+
+
+  .map img {
+    padding: 15%;
+    width: 120%;
+    border-radius: 30px;
+  }
+
+  .icons {
+    font-family: 'Comfortaa'; /* Assuming you use FontAwesome for the icons */
+    margin-left: 10px;
+  }
+
+    /* Contacts section adjustments */
+    .conatacts .container {
+
+      padding: 0 10px;
+    }
+
+    .contact-info, .map-container {
+      width: 100%;
+    }
