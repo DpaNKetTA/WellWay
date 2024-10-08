@@ -81,6 +81,15 @@
             border-radius: 10px;
         }
 
+        .star-rating {
+            color: #ccc;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .star-rating .filled {
+            color: #gold;  /* Заполненные звезды */
+        }
+
         .dropdown-content div {
             padding: 10px;
             cursor: pointer;
@@ -181,50 +190,56 @@
         <button id="close-modal-btn">&times;</button>
         <h2>Отзывы</h2>
 
-        <div class="input-group">
-            <label for="route">Выберите маршрут</label>
-            <div class="dropdown">
-                <input type="text" id="route" readonly placeholder="Нажмите для выбора маршрута">
-                <div class="dropdown-content" id="dropdown-list">
-                    <div>Маршрут 1</div>
-                    <div>Маршрут 2</div>
-                    <div>Маршрут 3</div>
-                    <div>Маршрут 4</div>
-                    <div>Маршрут 5</div>
-                </div>
+        <form method="post" enctype="multipart/form-data">  <!-- Обязательно указать enctype для загрузки файлов -->
+    {% csrf_token %}
+
+    <div class="input-group">
+        <label for="route">Выберите маршрут</label>
+        <div class="dropdown">
+            <input type="text" id="route" name="route" readonly placeholder="Нажмите для выбора маршрута">
+            <div class="dropdown-content" id="dropdown-list">
+                <div>Маршрут 1</div>
+                <div>Маршрут 2</div>
+                <div>Маршрут 3</div>
+                <div>Маршрут 4</div>
+                <div>Маршрут 5</div>
             </div>
         </div>
+    </div>
+            <div class="input-group">
+    <label>Оценка</label>
+    <div class="stars">
+        <input type="radio" id="star5" name="rating" value="5" {% if form.rating.value == "5" %}checked{% endif %}>
+        <label for="star5">&#9733;</label>
+        <input type="radio" id="star4" name="rating" value="4" {% if form.rating.value == "4" %}checked{% endif %}>
+        <label for="star4">&#9733;</label>
+        <input type="radio" id="star3" name="rating" value="3" {% if form.rating.value == "3" %}checked{% endif %}>
+        <label for="star3">&#9733;</label>
+        <input type="radio" id="star2" name="rating" value="2" {% if form.rating.value == '2' %} checked{% endif %}>
+        <label for="star2">&#9733;</label>
+        <input type="radio" id="star1" name="rating" value="1" {% if form.rating.value == "1" %}checked{% endif %}>
+        <label for="star1">&#9733;</label>
+    </div>
+</div>
 
-        <div class="input-group">
-            <label>Оценка</label>
-            <div class="stars">
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5">&#9733;</label>
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4">&#9733;</label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3">&#9733;</label>
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2">&#9733;</label>
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1">&#9733;</label>
-            </div>
-            {{ form.rating }}
-        </div>
 
-        <div class="input-group">
-            <label for="impressions">Поделитесь своими впечатлениями:</label>
-            {{ form.comment }}
+    <div class="input-group">
+        <label>Поделитесь своими впечатлениями:</label>
+        {{ form.comment }}
+    </div>
 
-        </div>
+    <div class="image-upload">
+        <label for="image-upload">Фотографии вашего путешествия</label>
+        <input type="file" id="image-upload" name="image" accept="image/*">
+        <label for="image-upload">Загрузить фото</label>
+    </div>
 
-        <div class="image-upload">
-            <label for="image-upload">Фотографии вашего путешествия</label>
-            <input type="file" id="image-upload" accept="image/*">
-            <label for="image-upload">Загрузить фото</label>
-        </div>
+    <button type="submit" id="submit-btn">Отправить</button>
+</form>
 
-        <button id="submit-btn">Отправить</button>
+
+     
+
     </div>
 </div>
 
