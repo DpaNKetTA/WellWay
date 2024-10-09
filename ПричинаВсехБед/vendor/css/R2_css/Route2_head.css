@@ -1,5 +1,8 @@
 /*СТИЛЬ СЕКЦИИ БАШКА*/
-
+html, body {
+  overflow-x: hidden; /* Принудительно скрываем горизонтальный скролл */
+  max-width: 1920;
+}
 
 
 
@@ -20,5 +23,5 @@
   text-align: center;
   font-size:7rem;
   margin-bottom: 10%;
-  margin-left: 32%;
+  margin-left: 33%;
 }

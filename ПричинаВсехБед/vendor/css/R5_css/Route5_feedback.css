@@ -1,5 +1,5 @@
 .feedback {
-  padding-top: 5%;
+    padding-top: 5%;
   padding-bottom: 3%;
   display: flex;
   justify-content: center;
@@ -20,16 +20,28 @@
     padding: 30px;
     max-width: 100%;
 }
+
+.review-text {
+    word-wrap: break-word; /* Перенос длинных слов */
+    overflow-wrap: break-word; /* Для поддержки в некоторых браузерах */
+    white-space: normal; /* Обычное поведение переноса строк */
+    max-width: 90%; /* Убедимся, что текст не выходит за рамки контейнера */
+    display: inline-block;
+    max-width: 100ch; 
+}
+
 .review-name,.review-stars,.review-text{
-    font-family: Manrope, sans-serif;
-    font-size: 1.3vw; /* Адаптивный размер текста */
+    font-family: 'Manrope';
+    font-size: 1.1vw; /* Адаптивный размер текста */
     padding-bottom: 1px;
 }
 .review-container {
+    max-width: 90%;
+    max-width: 1800px;
     background-color: #333;
     color: #fff;
     padding: 30px;
-    border-radius: 30px;
+    border-radius: 40px;
     position: relative;
     display: none;
     justify-content: row; /* Скрываем все отзывы кроме активного */
@@ -39,7 +51,7 @@
 }
 .review::after {
     content: '';
-    position: absolute;
+    position: fixed;
     left: 30px;
     bottom: -20px;
     border-width: 20px;
@@ -47,10 +59,13 @@
     border-color: #333 transparent transparent transparent;
 }
 .avatar {
+    margin-left: 3%;
     width: 85px;
     height: 85px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0; /* Запрещаем сжимать аватар */
+
 }
 .avatar img {
     width: 100%;
