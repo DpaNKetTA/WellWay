@@ -1,0 +1,84 @@
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #fffff0;
+  }
+
+  .section-1, .section-2, .section-3, .section-4 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+  .section-1 .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Элемент по левому краю */
+  }
+  .section-3 .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Элемент по левому краю */
+  }
+  .section-2 .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Элемент по левому краю */
+  }
+  .section-4 .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Элемент по левому краю */
+  }
+
+  .sections .image-container{
+    height: auto;
+    max-width: 100%
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+  /* Убираем flex для контента и изображений на мобильных и делаем их блоками */
+
+.sections h2{
+  padding: 15%;
+}
+
+ .section-2,.section-4 {
+    flex-direction: row-reverse;
+ }
+
+
+ .content1{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    padding-right: 0%;
+   }
+.content2{
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .content1, .content2{
+     flex: 1.55;
+     display: flex;
+  }
+
+
+ h2 {
+
+    color:#95AE7B ;
+    font-family: 'Comfortaa';
+    font-size:3.5vw; /* Адаптивный размер текста */
+    margin-bottom: 20px;
+  }
+
+ p {
+    padding-top: 7%;
+    font-family: 'Manrope';
+    font-size: 1.3vw; /* Адаптивный размер текста */
+    padding-bottom: 1px;
+  }
