@@ -88,8 +88,6 @@ def add_review(request):
 
         elif selected_route == 'Маршрут 5':
             form = ReviewForm5(data=request.POST)
-            print(form.is_valid())
-            print(form.errors)
             if form.is_valid():
                 review = form.save(commit=False)
                 review.user = request.user
