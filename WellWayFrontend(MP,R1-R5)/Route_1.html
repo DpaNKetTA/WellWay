@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="vendor/css/R1_css/Route1_feedback.css">
   <link rel="stylesheet" href="vendor/css/R1_css/Route1_down.css">
 
+  <link rel="stylesheet" href="vendor/css/MP_css/MP_otziwREAL.css">
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,10 +120,130 @@
       <button class="arrow right" id="nextArrow">→</button>
   </div>
 </div>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<button id="open-review-btn">Оставить отзыв</button>
+
+<div id="modal-overlay">
+    <div id="review-modal">
+        <div class="form_auth_block_content">
+        <button id="close-modal-btn">&times;</button>
+        
+        <p class="form_auth_block_head_text">Отзывы</p>
+
+        <div class="otzyv">
+
+        <div class="left-otzyv">
+            <img src="prudgect/css/img/Group 10.svg" height = 174.435px >
+   
+        </div>
+
+        <div class="right-otzyv">
+
+        <div class="input-group">
+            <label for="route">Выберите маршрут</label>
+            <div class="dropdown">
+                <input type="text" id="route" readonly placeholder="Нажмите для выбора маршрута">
+                <div class="dropdown-content" id="dropdown-list">
+                    <div>Правый берег Дона</div>
+                    <div>Зеленые тропы</div>
+                    <div>От Пушкина до революции</div>
+                    <div>Гребной канал</div>
+                    <div>Левый берег Дона</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Оценка</label>
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" value="1">
+                <label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="2">
+                <label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="4">
+                <label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="5">
+                <label for="star1">&#9733;</label>
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+        <label for="impressions">Расскажите о вашей велопрогулке:</label>
+
+        <div class="form-container">
+          <div class="input-group">
+              
+              <textarea id="impressions" rows="5" placeholder="Ваши впечатления"></textarea>
+          </div>
+          
+          <div class="image-upload">
+              <label for="image-upload">
+                  <img src="prudgect/css/img/dobavfoto.svg" alt="Загрузить фото профиля" width="30px">
+              </label>
+              <input type="file" id="image-upload" accept="image/*">
+          </div>
+        </div>
+
+
+        <button id="submit-btn">Отправить</button>
+        
+        </div>
+    </div>
+</div>
+
+<script>
+    // Show modal
+    document.getElementById('open-review-btn').addEventListener('click', function() {
+        document.getElementById('modal-overlay').style.display = 'flex';
+    });
+
+    // Close modal
+    document.getElementById('close-modal-btn').addEventListener('click', function() {
+        document.getElementById('modal-overlay').style.display = 'none';
+    });
+
+    // Dropdown functionality
+    const routeInput = document.getElementById('route');
+    const dropdownContent = document.getElementById('dropdown-list');
+
+    routeInput.addEventListener('click', function() {
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    dropdownContent.querySelectorAll('div').forEach(function(item) {
+        item.addEventListener('click', function() {
+            routeInput.value = this.textContent;
+            dropdownContent.style.display = 'none';
+        });
+    });
+
+    // Star rating functionality
+    const stars = document.querySelectorAll('.stars label');
+
+    stars.forEach((star, idx) => {
+        star.addEventListener('click', function() {
+            const starIndex = idx + 1;
+            stars.forEach((s, i) => {
+                if (i < starIndex) {
+                    s.style.color = 'gold';
+                } else {
+                    s.style.color = '#ccc';
+                }
+            });
+        });
+    });
+</script>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <div class="down">
   <div class="button-container">
       <a href="MainPage.html" class="button">На главную страницу</a>
-      <button class="button">Оставить отзыв</button>
+      
       <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.708855%2C47.215300&mode=routes&rtext=47.216050%2C39.700101~47.212574%2C39.706403~47.218338%2C39.732745~47.217138%2C39.725740~47.212649%2C39.706043~47.214721%2C39.703564~47.216021%2C39.700102&rtt=bc&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoN58weQhU83TxC~~~~~~&z=16.6" class="button">Отправиться в путь</a>
     </div>
 

@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="vendor/css/MP_css/MP_routes.css">
   <link rel="stylesheet" href="vendor/css/MP_css/MP_contact.css">
 
+  <link rel="stylesheet" href="vendor/css/MP_css/MP_otziw.css">
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script src="vendor/scripts/script_MP.js"></script>
@@ -31,7 +33,7 @@
           <div class="ul">
             <li><a href="#why-well-way">О нас</a></li>
             <li><a href="#routes">Маршруты</a></li>
-            <li><a href="#">Аккаунт</a></li>
+            <li><a href="#" class="account-link" >Аккаунт</a></li>
           </div>
         </div>
       </div>
@@ -245,6 +247,115 @@
 
   </main>
 
+  
+<!-- Modal overlay /////////////////////////////////////////////////-->
+<div id="modal-overlay">
+   <div id="review-modal">
+       <div class="form_auth_block_content">
+           <button id="close-modal-btn">&times;</button>
+           <p class="form_auth_block_head_text">Профиль</p>
 
+           <div class="otzyv"> 
+            <div class="left-otzyv"> 
+               <img src="prudgect/css/img/Group 10.svg" height="174.435px"> 
+           
+               <div class="image-upload">
+                   <label for="image-upload">
+                       <img src="prudgect/css/img/dobavfoto.svg" alt="Загрузить фото профиля" width="30px">
+                   </label>
+                   <input type="file" id="image-upload" accept="image/*">
+               </div>
+           </div>
+           
+           
+           
+           
+           
+           
+            <div class="right-otzyv"> 
+
+            <div class="input-group11"> 
+                <div class="input-group1"> 
+                    <img src="prudgect/css/img/sabaka.svg" width="30px">   
+                </div>           
+
+                <div class="input-group2"> 
+                    <label>Gluttton 19</label> 
+                    <h5>username</h5> 
+               </div> 
+            </div> 
+            <div class="input-group12"> 
+               <div class="input-group1"> 
+                    <img src="prudgect/css/img/E-mail.svg" width="30px">   
+               </div> 
+               <div class="input-group2"> 
+                    <label>gluttton8@gmail.com</label> 
+                    <h5>e-mail</h5> 
+               </div> 
+            </div>     
+                 
+            </div> 
+        </div>
+
+        <label for="impressions">Расскажите о себе:</label>
+
+         <div class="form-container">
+         <div class="input-group">
+             
+             <textarea id="impressions" rows="5" placeholder="Ваши впечатления"></textarea>
+         </div>
+         
+
+         </div>
+     
+        
+
+           <button id="submit-btn">Сохранить изменения</button>
+       </div>
+   </div>
+</div>
+  <script>
+   // Show modal on "Аккаунт" click
+   document.querySelector('.account-link').addEventListener('click', function(event) {
+       event.preventDefault(); // Prevent default link behavior
+       document.getElementById('modal-overlay').style.display = 'flex';
+   });
+   
+   // Close modal on button click
+   document.getElementById('close-modal-btn').addEventListener('click', function() {
+       document.getElementById('modal-overlay').style.display = 'none';
+   });
+   
+   // Dropdown functionality
+   const routeInput = document.getElementById('route');
+   const dropdownContent = document.getElementById('dropdown-list');
+   
+   routeInput.addEventListener('click', function() {
+       dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+   });
+   
+   dropdownContent.querySelectorAll('div').forEach(function(item) {
+       item.addEventListener('click', function() {
+           routeInput.value = this.textContent;
+           dropdownContent.style.display = 'none';
+       });
+   });
+   
+   // Star rating functionality
+   const stars = document.querySelectorAll('.stars label');
+   stars.forEach((star, idx) => {
+       star.addEventListener('click', function() {
+           const starIndex = idx + 1;
+           stars.forEach((s, i) => {
+               if (i < starIndex) {
+                   s.style.color = 'gold';
+               } else {
+                   s.style.color = '#ccc';
+               }
+           });
+       });
+   });
+   
+   </script>
 </body>
 </html>
