@@ -8,7 +8,7 @@ html, body {
 
 .hero {
   color:white;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R2/маршрут2.svg');
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R2/head2.svg');
   width: 100%;
   background-size: cover;
   display: flex;
