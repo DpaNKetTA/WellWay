@@ -60,6 +60,16 @@
     width: 174px;
     padding-bottom: 30px;
     padding-right: 70px;
+    border-radius: 50%;
+
+    }
+
+    .left-otzyv img {
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;  /* Сделать изображение круглым */
+    object-fit: cover;
+
     }
     .right-otzyv {
         width: calc(100% - 200px); /* Остальное пространство для правой части */
@@ -213,6 +223,7 @@
     }
 
     .image-upload {
+
         text-align: center;
         margin-top: 20px;
     }
@@ -296,7 +307,7 @@
         cursor: pointer;
         display: inline-block;
         background-color: #E3E4E4; /* Цвет фона */
-        border-radius: 45px; /* Закругленные углы */
+        border-radius: 100px; /* Закругленные углы */
         padding: 10px;
     }
     
@@ -309,9 +320,9 @@
         height: auto;
         display: block;
         margin: 0 auto;
+        border-radius: 0px; /* убираем Закругленные углы */
+
     }
-    
-    
 
 
 

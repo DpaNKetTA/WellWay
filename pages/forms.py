@@ -60,3 +60,4 @@ class ReviewForm5(forms.ModelForm):
                 'class': 'input-group', 'placeholder': 'Ваши впечатления', 'rows': 5
             }),
         }
+

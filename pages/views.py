@@ -4,11 +4,24 @@ from django.contrib.auth.decorators import login_required
 from .models import Review, Review3, Review5, Review2, Review4
 from users.models import User
 from .forms import ReviewForm, ReviewForm2, ReviewForm3, ReviewForm4, ReviewForm5
+from users.forms import UserProfileForm
 
 # Create your views here.
 
 def main(request):
-    return render(request, 'pages/MainPage.html')
+
+    if request.method == 'POST':
+        form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
+        print(form.is_valid())
+        if form.is_valid():
+            form.save()
+            return redirect('MainPage')
+        else:
+            print(form.errors)
+    else:
+        form = UserProfileForm(instance=request.user)
+    context = {'form': form}
+    return render(request, 'pages/MainPage.html', context)
 
 def Route_1(request):
     reviews = Review.objects.all()  # Получаем все отзывы

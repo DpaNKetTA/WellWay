@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 
 from users.models import User
 
@@ -26,4 +26,11 @@ class UserRegistrationForm(UserCreationForm):
         fields = ('username', 'email', 'password1', 'password2')
 
 
+class UserProfileForm(UserChangeForm):
+    image = forms.ImageField(widget=forms.FileInput(attrs={
+        'class': 'image-upload'}))
+ #   username = forms.CharField(widget=forms.TextInput(attrs={'class': 'input-group2', 'readonly': True}))
 
+    class Meta:
+        model = User
+        fields = ('image',)
