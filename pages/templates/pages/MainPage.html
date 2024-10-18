@@ -288,7 +288,11 @@
                     <img src="/static/prudgect/css/img/E-mail.svg" width="30px">
                </div>
                <div class="input-group2">
-                    <label>gluttton8@gmail.com</label>
+                   {% if user.email %}
+                    <label>{{ user.email }}</label>
+                   {% else %}
+                    <label>Вы не ввели почту</label>
+                   {% endif %}
                     <h5>e-mail</h5>
                </div>
             </div>
