@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,40 +88,42 @@
    </section>
 
    <div class="feedback">Ваши отзывы</div>
+
    <div class="review-wrapper">
 
     <div class="review-section">
       <button class="arrow left" id="prevArrow">←</button>
+
+        {% for review in reviews %}
       <div class="review-container" id="review-0">
           <div class="avatar">
-              <img src="https://via.placeholder.com/75" alt="Avatar">
+              {% if review.user.image %}
+                <img src="{{ review.user.image.url }}" alt="{{ review.user.username }}">
+              {% else %}
+                <img src="{% static 'img.png' %}" alt="{{review.user.username}}">
+              {% endif %}
           </div>
           <div class="review-content">
-              <div class="review-name">Евгения</div>
-              <div class="review-stars">★★★★★</div>
-              <div class="review-text">Сайт значительно облегчает жизнь любителям покататься! Жду новые маршруты!</div>
+              <div class="review-name">
+                  {{ review.user.username }}
+              </div>
+              <div class="review-stars">
+                  {% for i in stars_range %}
+                    {% if i <= review.rating %}
+                         <span class="empty-star">★</span>
+                    {% else %}
+                          <span class="empty-star">☆</span>
+                    {% endif %}
+                  {%endfor%}
+              </div>
+
+              <div class="review-text">
+                  {{ review.comment }}
+              </div>
           </div>
       </div>
-      <div class="review-container" id="review-1">
-          <div class="avatar">
-              <img src="https://via.placeholder.com/50" alt="Avatar">
-          </div>
-          <div class="review-content">
-              <div class="review-name">Иван</div>
-              <div class="review-stars">★★★★☆</div>
-              <div class="review-text">Отличный ресурс, но хотелось бы больше маршрутов по моему региону.</div>
-          </div>
-      </div>
-      <div class="review-container" id="review-2">
-          <div class="avatar">
-              <img src="https://via.placeholder.com/50" alt="Avatar">
-          </div>
-          <div class="review-content">
-              <div class="review-name">Ольга</div>
-              <div class="review-stars">★★★★★</div>
-              <div class="review-text">Прекрасный сервис, маршруты всегда интересные и разнообразные.</div>
-          </div>
-      </div>
+        {% endfor %}
+
       <button class="arrow right" id="nextArrow">→</button>
   </div>
 </div>

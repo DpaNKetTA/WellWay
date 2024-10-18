@@ -28,7 +28,7 @@ def Route_1(request):
                 review = form.save(commit=False)
                 review.user = request.user
                 review.save()
-                return redirect('MainPage')
+                return redirect('Route_1')
 
         elif selected_route == 'Зеленые тропы':
             form = ReviewForm2(data=request.POST)
@@ -146,17 +146,197 @@ def Route_3(request):
     reviews = Review3.objects.all()  # Получаем все отзывы
 
     stars_range = range(1, 6)  # Диапазон от 1 до 5
-    return render(request, 'pages/Route_3.html', {'reviews': reviews, 'stars_range': stars_range})
+
+    if request.method == 'POST':
+        selected_route = request.POST.get('route')
+        print(selected_route)
+
+        if selected_route == 'Правый берег Дона':
+            form = ReviewForm(data=request.POST)
+            print (form.is_valid())
+            print (form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                return redirect('Route_1')
+
+        elif selected_route == 'Зеленые тропы':
+            form = ReviewForm2(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                return redirect('Route_2')
+
+        elif selected_route == 'От Пушкина до революции':
+            form = ReviewForm3(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_3')
+
+        elif selected_route == 'Гребной канал':
+            form = ReviewForm4(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_4')
+
+        elif selected_route == 'Левый берег Дона':
+            form = ReviewForm5(data=request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_5')
+        else:
+            form = ReviewForm()
+    else:
+        form = ReviewForm()
+
+    return render(request, 'pages/Route_3.html', {'reviews': reviews, 'stars_range': stars_range, 'form': form })
 def Route_4(request):
     reviews = Review4.objects.all()  # Получаем все отзывы
 
     stars_range = range(1, 6)  # Диапазон от 1 до 5
-    return render(request, 'pages/Route_4.html', {'reviews': reviews, 'stars_range': stars_range})
+
+    if request.method == 'POST':
+        selected_route = request.POST.get('route')
+        print(selected_route)
+
+        if selected_route == 'Правый берег Дона':
+            form = ReviewForm(data=request.POST)
+            print (form.is_valid())
+            print (form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                return redirect('Route_1')
+
+        elif selected_route == 'Зеленые тропы':
+            form = ReviewForm2(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                return redirect('Route_2')
+
+        elif selected_route == 'От Пушкина до революции':
+            form = ReviewForm3(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_3')
+
+        elif selected_route == 'Гребной канал':
+            form = ReviewForm4(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_4')
+
+        elif selected_route == 'Левый берег Дона':
+            form = ReviewForm5(data=request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_5')
+        else:
+            form = ReviewForm()
+    else:
+        form = ReviewForm()
+
+    return render(request, 'pages/Route_4.html', {'reviews': reviews, 'stars_range': stars_range, 'form':form})
 def Route_5(request):
     reviews = Review5.objects.all()  # Получаем все отзывы
 
     stars_range = range(1, 6)  # Диапазон от 1 до 5
-    return render(request, 'pages/Route_5.html', {'reviews': reviews, 'stars_range': stars_range})
+
+    if request.method == 'POST':
+        selected_route = request.POST.get('route')
+        print(selected_route)
+
+        if selected_route == 'Правый берег Дона':
+            form = ReviewForm(data=request.POST)
+            print (form.is_valid())
+            print (form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                return redirect('Route_1')
+
+        elif selected_route == 'Зеленые тропы':
+            form = ReviewForm2(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                return redirect('Route_2')
+
+        elif selected_route == 'От Пушкина до революции':
+            form = ReviewForm3(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_3')
+
+        elif selected_route == 'Гребной канал':
+            form = ReviewForm4(data=request.POST)
+            print(form.is_valid())
+            print(form.errors)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_4')
+
+        elif selected_route == 'Левый берег Дона':
+            form = ReviewForm5(data=request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.save()
+                print('qwerty')
+                return redirect('Route_5')
+        else:
+            form = ReviewForm()
+    else:
+        form = ReviewForm()
+
+    return render(request, 'pages/Route_5.html', {'reviews': reviews, 'stars_range': stars_range, 'form':form})
 #def AddReview(request):
 #    return render(request, 'pages/html3.html')
 
