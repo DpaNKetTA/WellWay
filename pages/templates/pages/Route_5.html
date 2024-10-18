@@ -106,7 +106,7 @@
                   {{ review.user.username }}
               </div>
               <div class="review-stars">
-                  {% for i in star_range %}
+                  {% for i in stars_range %}
                     {% if i <= review.rating %}
                         <span class="empty-star">★</span>
                     {% else %}
