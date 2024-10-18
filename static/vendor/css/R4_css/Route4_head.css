@@ -6,7 +6,7 @@ html, body {
 
 .hero {
   color:white;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R4/маршрут4.svg');
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R4/head4.svg');
   width: 100%;
   background-size: cover;
   display: flex;
@@ -21,7 +21,7 @@ html, body {
   text-align: center;
   font-size:8rem;
   margin-bottom: 0%;
-  margin-left: 32%;
+  margin-left: 21%;
   margin-bottom: 10%;
 
 }

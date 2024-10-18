@@ -27,7 +27,6 @@
     white-space: normal; /* Обычное поведение переноса строк */
     max-width: 90%; /* Убедимся, что текст не выходит за рамки контейнера */
     display: inline-block;
-    max-width: 100ch; 
 }
 
 .review-name,.review-stars,.review-text{

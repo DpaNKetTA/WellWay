@@ -1,6 +1,3 @@
-{% load static %}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +10,8 @@
   <link rel="stylesheet" href="/static/vendor/css/R2_css/Route2_sections.css">
   <link rel="stylesheet" href="/static/vendor/css/R2_css/Route2_feedback.css">
   <link rel="stylesheet" href="/static/vendor/css/R2_css/Route2_down.css">
+
+  <link rel="stylesheet" href="/static/vendor/css/MP_css/MP_otziwREAL.css">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,50 +86,169 @@
    </section>
 
    <div class="feedback">Ваши отзывы</div>
-
    <div class="review-wrapper">
 
     <div class="review-section">
       <button class="arrow left" id="prevArrow">←</button>
-
-            {% for review in reviews %}
-
       <div class="review-container" id="review-0">
           <div class="avatar">
-            {% if review.user.image %}
-                <img src="{{ review.user.image.url }}" alt="{{ review.user.username }}" class="avatar">
-            {% else %}
-                <img src="{% static 'img.png' %}" alt="{{ review.user.username }}" class="avatar">
-            {% endif %}
+              <img src="https://via.placeholder.com/75" alt="Avatar">
           </div>
           <div class="review-content">
-              <div class="review-name">{{ review.user.username }}</div>
-              <div class="review-stars">
-                  {% for i in stars_range %}
-                    {% if i <= review.rating %}
-                        <span class="empty-star">★</span>
-                        <!-- Заполненная звезда -->
-                    {% else %}
-                        <span class="empty-star">☆</span> <!-- Пустая звезда -->
-                  {% endif %}
-                  {% endfor %}
-              </div>
-              <div class="review-text">{{review.comment}}</div>
+              <div class="review-name">Евгения</div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">Сайт значительно облегчает жизнь любителям покататься! Жду новые маршруты!</div>
           </div>
       </div>
-
-            {% endfor %}
-
-
+      <div class="review-container" id="review-1">
+          <div class="avatar">
+              <img src="https://via.placeholder.com/50" alt="Avatar">
+          </div>
+          <div class="review-content">
+              <div class="review-name">Иван</div>
+              <div class="review-stars">★★★★☆</div>
+              <div class="review-text">Отличный ресурс, но хотелось бы больше маршрутов по моему региону.</div>
+          </div>
+      </div>
+      <div class="review-container" id="review-2">
+          <div class="avatar">
+              <img src="https://via.placeholder.com/50" alt="Avatar">
+          </div>
+          <div class="review-content">
+              <div class="review-name">Ольга</div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">Прекрасный сервис, маршруты всегда интересные и разнообразные.</div>
+          </div>
+      </div>
       <button class="arrow right" id="nextArrow">→</button>
   </div>
+</div>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
+<button id="open-review-btn">Оставить отзыв</button>
+
+<div id="modal-overlay">
+    <div id="review-modal">
+        <div class="form_auth_block_content">
+        <button id="close-modal-btn">&times;</button>
+
+        <p class="form_auth_block_head_text">Отзывы</p>
+
+        <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+        <div class="otzyv">
+
+        <div class="left-otzyv">
+            <img src="/static/prudgect/css/img/Group 10.svg" height = 174.435px >
+
+        </div>
+
+        <div class="right-otzyv">
+
+        <div class="input-group">
+            <label for="route">Выберите маршрут</label>
+            <div class="dropdown">
+                <input type="text" id="route" name="route" readonly placeholder="Нажмите для выбора маршрута">
+                <div class="dropdown-content" id="dropdown-list">
+                    <div>Правый берег Дона</div>
+                    <div>Зеленые тропы</div>
+                    <div>От Пушкина до революции</div>
+                    <div>Гребной канал</div>
+                    <div>Левый берег Дона</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Оценка</label>
+            <div class="stars">
+                <input type="radio" id="star1" name="rating" value="1" {% if form.rating.value == "1" %}checked{% endif %}>
+                <label for="star1">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2" {% if form.rating.value == "2" %}checked{% endif %}>
+                <label for="star2">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3" {% if form.rating.value == "3" %}checked{% endif %}>
+                <label for="star3">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4" {% if form.rating.value == '4' %} checked{% endif %}>
+                <label for="star4">&#9733;</label>
+                <input type="radio" id="star5" name="rating" value="5" {% if form.rating.value == "5" %}checked{% endif %}>
+                <label for="star5">&#9733;</label>
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+        <label for="impressions">Расскажите о вашей велопрогулке:</label>
+
+        <div class="form-container">
+          <div class="input-group">
+              {{form.comment}}
+          </div>
+
+          <div class="image-upload">
+              <label for="image-upload">
+                  <img src="/static/prudgect/css/img/dobavfoto.svg" alt="Загрузить фото профиля" width="30px">
+              </label>
+              <input type="file" id="image-upload" accept="image/*">
+          </div>
+        </div>
+
+
+        <button id="submit-btn">Отправить</button>
+        </form>
+        </div>
+    </div>
 </div>
 
+<script>
+    // Show modal
+    document.getElementById('open-review-btn').addEventListener('click', function() {
+        document.getElementById('modal-overlay').style.display = 'flex';
+    });
+
+    // Close modal
+    document.getElementById('close-modal-btn').addEventListener('click', function() {
+        document.getElementById('modal-overlay').style.display = 'none';
+    });
+
+    // Dropdown functionality
+    const routeInput = document.getElementById('route');
+    const dropdownContent = document.getElementById('dropdown-list');
+
+    routeInput.addEventListener('click', function() {
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    dropdownContent.querySelectorAll('div').forEach(function(item) {
+        item.addEventListener('click', function() {
+            routeInput.value = this.textContent;
+            dropdownContent.style.display = 'none';
+        });
+    });
+
+    // Star rating functionality
+    const stars = document.querySelectorAll('.stars label');
+
+    stars.forEach((star, idx) => {
+        star.addEventListener('click', function() {
+            const starIndex = idx + 1;
+            stars.forEach((s, i) => {
+                if (i < starIndex) {
+                    s.style.color = 'gold';
+                } else {
+                    s.style.color = '#ccc';
+                }
+            });
+        });
+    });
+</script>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <div class="down">
   <div class="button-container">
-      <a href="{% url 'MainPage' %}" class="button">На главную страницу</a>
-      <a href="{% url 'Add_Review' %}" class="button">Оставить отзыв</a>
+      <a href=" {% url 'MainPage' %} " class="button">На главную страницу</a>
+
       <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.776646%2C47.248444&mode=routes&rtext=47.252960%2C39.786607~47.243716%2C39.764737~47.245636%2C39.763423~47.246347%2C39.764013~47.248627%2C39.763426~47.248099%2C39.761845~47.246633%2C39.761808~47.244141%2C39.762887~47.243163%2C39.764639~47.252236%2C39.788429~47.250996%2C39.790136~47.253692%2C39.791570~47.253052%2C39.786479&rtt=sc&ruri=~~~~~~~~~~~~&z=16" class="button">Отправиться в путь</a>
   </div>
 

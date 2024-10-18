@@ -2,137 +2,172 @@
 html, body {
   overflow-x: hidden; /* Принудительно скрываем горизонтальный скролл */
   max-width: 1920;
-}
-.header {
-  background-color: rgba(0, 0, 0, 0);
-
-}
-
-.header .nav .ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-}
-
-.nav .ul li {
-  margin: 0 6rem;
-}
-
-.nav a {
-  font-family: Manrope;
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  color: #ccc;
-}
-
-.hero {
-  color:white;
-  padding-top: 4%;
-  padding-left: 1%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_MP/hero-image.svg');
-  background-attachment: fixed;
-  width: 100%;
-  height: 95vh;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
 }
 
 
-.hero h1 {
-  font-family: 'Comfortaa' ;
-  font-size:8rem;
-  margin-bottom: 0%;
 
+
+
+
+
+@media (max-width: 4000px) {
+  .header {
+    background-color: rgba(0, 0, 0, 0);
+
+  }
+
+  .header .nav .ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  .nav .ul li {
+    margin: 0 3rem;
+  }
+
+  .nav a {
+    font-family: Manrope;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav a:hover {
+    color: #ccc;
+  }
+
+  .hero {
+    color:white;
+    padding-top: 4%;
+    padding-left: 1%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_MP/hero-image.svg');
+    background-attachment: fixed;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+
+  .hero h1 {
+    font-family: 'Comfortaa' ;
+    font-size:8rem;
+    margin-bottom: 0%;
+
+  }
+
+  .hero  p {
+    font-size:2.9rem;
+    letter-spacing: 10px;
+    margin-bottom: 0%;
+    font-family: 'Manrope';
+  }
+  .hero p:nth-child(5) {
+    font-size:1.4rem;
+    font-family: 'Manrope';
+    letter-spacing: 0px;
+    margin-bottom: 4%;
+  }
+
+  .hero .cta {
+    background-color: #5E843E;
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin:0rem,1rem ;
+    text-decoration: none;
+    font-family: 'Manrope';
+    font-size: 1.6rem;
+    border-radius:20px;
+    margin-bottom: 13%;
+  }
+
+  .hero .cta:hover {
+    background-color: #7fab5c;
+  }
 }
 
-.hero  p {
-  font-size:2.9rem;
-  letter-spacing: 10px;
-  margin-bottom: 0%;
-  font-family: 'Manrope';
-}
-.hero p:nth-child(5) {
-  font-size:2.4rem;
-  font-family: 'Manrope';
-  letter-spacing: 0px;
-  margin-bottom: 4%;
-}
+@media (max-width: 900px) {
+  .header {
+    background-color: rgba(0, 0, 0, 0);
 
-.hero .cta {
-  background-color: #5E843E;
-  border: none;
-  color: #fff;
-  padding: 1rem 2rem;
-  margin:0rem,1rem ;
-  text-decoration: none;
-  font-family: 'Manrope';
-  font-size: 1.6rem;
-  border-radius:20px;
-  margin-bottom: 13%;
-}
+  }
 
-.hero .cta:hover {
-  background-color: #7fab5c;
-}
+  .header .nav .ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
 
+  .nav .ul li {
+    margin: 0 1rem;
+  }
 
-.account-link {
-  display: inline-block;
-  padding-left: 22px; /* Отступ для иконки */
-  background: url('user-2.svg') no-repeat left center;
-  background-size: 18px 18px; /* Размер иконки */
-}
+  .nav a {
+    font-family: Manrope;
+    color: #fff;
+    text-decoration: none;
+  }
 
+  .nav a:hover {
+    color: #ccc;
+  }
 
+  .hero {
+    color:white;
+    padding-top: 4%;
+    padding-left: 1%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_MP/hero-image.svg');
+    background-attachment: fixed;
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-
-
+  }
 
 
+  .hero h1 {
+    padding-top: 30%;
+    font-family: 'Comfortaa' ;
+    font-size:3.5rem;
+    margin-bottom: 0%;
 
+  }
 
+  .hero  p {
+    font-size:0.9rem;
+    letter-spacing: 10px;
+    margin-bottom: 0%;
+    font-family: 'Manrope';
+  }
+  .hero p:nth-child(5) {
+    font-size:.0rem;
+    font-family: 'Manrope';
+    letter-spacing: 0px;
+    margin-bottom: 4%;
+  }
 
+  .hero .cta {
+    background-color: #5E843E;
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin:0rem,1rem ;
+    text-decoration: none;
+    font-family: 'Manrope';
+    font-size: 1.6rem;
+    border-radius:20px;
+    margin-bottom: 13%;
+  }
 
-  
-#modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none; /* Initially hidden */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-#review-modal {
-  width: 587.25px;
-  height: 532px;
-  background-color: #fff;
-  background-image: url('prudgect/css/img/Rectangle_2.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 22.5px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  z-index: 1100;
-}
-
-#close-modal-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  background: transparent;
+  .hero .cta:hover {
+    background-color: #7fab5c;
+    scroll-behavior: smooth;
+  }
 }

@@ -1,4 +1,4 @@
-
+@media (max-width:1920px){
   .conatacts {
     padding-left: 15%;
     display: flex;
@@ -36,7 +36,7 @@
 
   .map img {
     padding: 15%;
-    width: 120%;
+    width: 100%;
     border-radius: 30px;
   }
 
@@ -54,3 +54,44 @@
     .contact-info, .map-container {
       width: 100%;
     }
+}
+
+
+@media (max-width:900px){
+  .conatacts {
+    height: auto;
+    display: flex;
+    color: black;
+    background-color: #7FAB5C;
+
+  }
+
+  .container h1 {
+    font-size: 5.2vw;
+    font-family:'Comfortaa';
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+
+  }
+
+  .contact-details {
+    padding-right: 20%;
+    padding-top: 0%;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.9vw;
+    font-family:'Manrope';
+    color: white;
+  }
+  .map img {
+    padding: 0%;
+    padding-left: 16%;
+    width: 50%;
+    border-radius: 50px;
+  }
+
+
+}
