@@ -33,3 +33,7 @@ def register(request):
         form = UserRegistrationForm()
     context = {'form': form}
     return render(request, 'users/prost0.html', context)
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect(reverse('MainPage'))

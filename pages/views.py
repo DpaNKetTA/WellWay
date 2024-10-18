@@ -9,19 +9,21 @@ from users.forms import UserProfileForm
 # Create your views here.
 
 def main(request):
-
-    if request.method == 'POST':
-        form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
-        print(form.is_valid())
-        if form.is_valid():
-            form.save()
-            return redirect('MainPage')
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
+            print(form.is_valid())
+            if form.is_valid():
+                form.save()
+                return redirect('MainPage')
+            else:
+                print(form.errors)
         else:
-            print(form.errors)
-    else:
-        form = UserProfileForm(instance=request.user)
-    context = {'form': form}
-    return render(request, 'pages/MainPage.html', context)
+            form = UserProfileForm(instance=request.user)
+        context = {'form': form}
+        return render(request, 'pages/MainPage.html', context)
+
+    return render(request, 'pages/MainPage.html')
 
 def Route_1(request):
     reviews = Review.objects.all()  # Получаем все отзывы
