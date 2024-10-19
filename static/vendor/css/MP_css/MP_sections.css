@@ -64,4 +64,78 @@
         width: 100%;
       }
 
+}
+
+
+@media (max-width: 800px){
+  .sections {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      background-color: #fffff0;
     }
+    .content1 h2{
+      font-family: 'Comfortaa';
+    }
+    .content1, .content2 h2 {
+      font-family: 'Comfortaa';
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    .content1 h2 {
+      font-family: 'Comfortaa';
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .content1, .content2  p {
+      font-family: 'Manrope';
+      font-size: 0.5rem;
+    }
+
+
+    .section-1, .section-2, .section-3 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .sections .image-container {
+      width: 20%; /* Ширина контейнера, может быть любая */
+      margin:  auto; /* Центрирование контейнера */
+    }
+
+    .sections .image-container{
+      height: auto;
+      max-width: 100%
+    }
+    /* Убираем flex для контента и изображений на мобильных и делаем их блоками */
+
+
+    /* Для десктопов и больших экранов */
+
+      .section-2 {
+        flex-direction: row-reverse;
+      }
+
+      .image-container {
+        flex: 1;
+        max-width: 50%;
+      }
+      .content1{
+        text-align: left;
+      }
+      .content2{
+        text-align: right;
+      }
+      .content1, .content2{
+        flex: 0.9;
+        padding: 20px;
+
+
+      }
+      .image-container img {
+        width: 100%;
+      }
+
+}

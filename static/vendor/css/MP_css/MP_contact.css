@@ -56,42 +56,63 @@
     }
 }
 
-
-@media (max-width:900px){
+@media (max-width:800px){
   .conatacts {
-    height: auto;
+    height: 100hv;
+    padding-left: 15%;
     display: flex;
+    flex-direction: row;
     color: black;
     background-color: #7FAB5C;
 
   }
 
   .container h1 {
-    font-size: 5.2vw;
+    font-size: 4.5rem;
     font-family:'Comfortaa';
     text-align: center;
+    transform: translateX(-15%); /* Move the h1 10% to the left */
   }
 
   .content {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
 
   }
 
   .contact-details {
-    padding-right: 20%;
-    padding-top: 0%;
-    text-align: center;
-    justify-content: center;
-    font-size: 1.9vw;
+    padding-top: 25%;
+    font-size: 1.4rem;
     font-family:'Manrope';
     color: white;
   }
-  .map img {
-    padding: 0%;
-    padding-left: 16%;
-    width: 50%;
-    border-radius: 50px;
+
+
+  .contact-details .phone-number {
+    margin: 30px; /* Add extra space above the phone number */
   }
 
 
+  .map img {
+    padding: 15%;
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  .icons {
+    font-family: 'Comfortaa'; /* Assuming you use FontAwesome for the icons */
+    margin-left: 10px;
+  }
+
+    /* Contacts section adjustments */
+    .conatacts .container {
+
+      padding: 0 10px;
+    }
+
+    .contact-info, .map-container {
+      width: 100%;
+    }
 }
+
+
