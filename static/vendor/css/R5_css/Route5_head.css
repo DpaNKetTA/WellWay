@@ -5,7 +5,7 @@ html, body {
   max-width: 1920;
 }
 
-
+@media (max-width:1920px){
 .hero {
   color:white;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R5/head5.svg');
@@ -25,3 +25,27 @@ html, body {
   margin-left: 25%;
 
 }
+}
+
+@media (max-width:800px){
+  .hero {
+    color:white;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R5/head5.svg');
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 95vh;
+  }
+
+
+  .hero h1 {
+    font-family: 'Comfortaa' ;
+    text-align: center;
+    font-size:2.8rem;
+    margin-bottom: 7%;
+    margin-left: 16%;
+
+  }
+  }

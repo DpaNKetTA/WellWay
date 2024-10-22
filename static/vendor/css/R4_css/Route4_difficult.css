@@ -1,18 +1,42 @@
-.difficulty-rating {
-    text-align: center;
-    font-family: "Manrope", sans-serif;
-    background-color: #fffff0;
-    padding: 20px;
-    border-radius: 10px;
-}
+@media (max-width: 4000px){
+    .difficulty-rating {
+        text-align: center;
+        font-family: "Manrope", sans-serif;
+        background-color: #fffff0;
+        padding: 20px;
+        border-radius: 10px;
+    }
 
-.difficulty-rating p {
-    margin: 0;
-    font-size: 18px;
-    color: #707070;
-}
+    .difficulty-rating p {
+        margin: 0;
+        font-size: 18px;
+        color: #707070;
+    }
 
-.stars {
-    font-size: 90px;
-    color: #7FAB5C; /* Зеленый цвет для звезд */
-}
+    .stars {
+        font-size: 90px;
+        color: #7FAB5C; /* Зеленый цвет для звезд */
+    }
+    }
+
+
+    @media (max-width: 800px){
+        .difficulty-rating {
+            text-align: center;
+            font-family: "Manrope", sans-serif;
+            background-color: #fffff0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .difficulty-rating p {
+            margin: 0;
+            font-size: 5px;
+            color: #707070;
+        }
+
+        .stars {
+            font-size: 30px;
+            color: #7FAB5C; /* Зеленый цвет для звезд */
+        }
+    }

@@ -335,8 +335,7 @@ include dark {
             .main {
 
                font-weight:bold;
-               font-size:0.6rem;
-
+               font-size:0.5rem;
             }
             .sub {
                transition-delay:.1s;

@@ -68,35 +68,35 @@
   }
 
   .container h1 {
-    font-size: 4.5rem;
+    font-size: 3.8rem;
     font-family:'Comfortaa';
-    text-align: center;
-    transform: translateX(-15%); /* Move the h1 10% to the left */
+    text-align: center;/* Move the h1 10% to the left */
   }
 
   .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
   }
 
   .contact-details {
-    padding-top: 25%;
-    font-size: 1.4rem;
+    padding-top: 3%;
+    font-size: 1.1rem;
     font-family:'Manrope';
     color: white;
   }
 
 
   .contact-details .phone-number {
-    margin: 30px; /* Add extra space above the phone number */
+    margin: 0px; /* Add extra space above the phone number */
   }
 
 
   .map img {
-    padding: 15%;
-    width: 100%;
-    border-radius: 30px;
+    padding: 0%;
+    width: 80%;
+    border-radius: 40px;
+    padding-bottom: 5%;
   }
 
   .icons {
@@ -114,5 +114,3 @@
       width: 100%;
     }
 }
-
-
