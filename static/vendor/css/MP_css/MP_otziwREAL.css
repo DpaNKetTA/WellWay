@@ -174,7 +174,7 @@ input, textarea {
     cursor: pointer;
 }
 
-/* Star hover and selection */
+/* Star hover and selection 
 .stars label:hover, .stars label:hover ~ label {
     color: gold;
 }
@@ -182,6 +182,7 @@ input, textarea {
 .stars input:checked ~ label {
     color: gold;
 }
+*/
 
 .image-upload {
     text-align: center;
