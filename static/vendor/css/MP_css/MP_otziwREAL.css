@@ -175,13 +175,7 @@ input, textarea {
 }
 
 /* Star hover and selection 
-.stars label:hover, .stars label:hover ~ label {
-    color: gold;
-}
 
-.stars input:checked ~ label {
-    color: gold;
-}
 */
 
 .image-upload {
