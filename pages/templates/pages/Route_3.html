@@ -127,7 +127,9 @@
 </div>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-<button id="open-review-btn">Оставить отзыв</button>
+{% if user.is_authenticated %}
+    <button id="open-review-btn">Оставить отзыв</button>
+{% endif %}
 
 <div id="modal-overlay">
     <div id="review-modal">
@@ -252,7 +254,10 @@
 <div class="down">
   <div class="button-container">
       <a href="{% url 'MainPage' %}" class="button">На главную страницу</a>
-
+        {% if user.is_authenticated %}
+        {% else %}
+      <a href="{% url 'users:login' %} " class="button">Вы еще не можете оставлять отзывы. Войдите в аккаунт</a>
+        {% endif %}
       <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.722303%2C47.226162&mode=routes&rtext=47.221457%2C39.697184~47.223892%2C39.709577~47.227519%2C39.726670~47.230440%2C39.740532~47.229449%2C39.742768~47.230342%2C39.747503~47.230624%2C39.744564~47.230408%2C39.739637~47.221459%2C39.697184&rtt=sc&ruri=~~~~~~~~&z=15" class="button">Отправиться в путь</a>
 
   </div>

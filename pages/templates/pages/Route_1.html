@@ -134,8 +134,9 @@
   </div>
 </div>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<button id="open-review-btn">Оставить отзыв</button>
+{% if user.is_authenticated %}
+    <button id="open-review-btn">Оставить отзыв</button>
+{% endif %}
 
 <div id="modal-overlay">
     <div id="review-modal">
@@ -259,9 +260,19 @@
 <div class="down">
   <div class="button-container">
       <a href="{% url 'MainPage' %} " class="button">На главную страницу</a>
+<<<<<<< HEAD
+        {% if user.is_authenticated %}
+        {% else %}
+      <a href="{% url 'users:login' %} " class="button">Вы еще не можете оставлять отзывы. Войдите в аккаунт</a>
+        {% endif %}
+      <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.708855%2C47.215300&mode=routes&rtext=47.216050%2C39.700101~47.212574%2C39.706403~47.218338%2C39.732745~47.217138%2C39.725740~47.212649%2C39.706043~47.214721%2C39.703564~47.216021%2C39.700102&rtt=bc&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoN58weQhU83TxC~~~~~~&z=16.6"
+         class="button">Отправиться в путь</a>
+    </div>j
+=======
 
       <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.708855%2C47.215300&mode=routes&rtext=47.216050%2C39.700101~47.212574%2C39.706403~47.218338%2C39.732745~47.217138%2C39.725740~47.212649%2C39.706043~47.214721%2C39.703564~47.216021%2C39.700102&rtt=bc&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoN58weQhU83TxC~~~~~~&z=16.6" class="button">Отправиться в путь</a>
     </div>
+>>>>>>> 0d751be8fb699a005a91b275de823eba473b7899
 
 <script>
   // Текущий индекс отзыва
