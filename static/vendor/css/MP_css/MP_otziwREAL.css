@@ -302,7 +302,7 @@ input, textarea {
 
 
 
-    @media (max-width: 430px) {
+    @media (max-width: 800px) {
         #open-review-btn {
             padding: 10px 0px;
             font-size: 31.5px;
