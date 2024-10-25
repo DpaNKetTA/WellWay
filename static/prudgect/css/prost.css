@@ -191,14 +191,14 @@ c {
     padding-left: 7.5px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 430px) {
   .form_auth_block {
     position: center;
     margin: 0;
     padding: 0;
   }
   body {
-    background-image: url('img/mobila2.svg');
+    background-image: url('img/mobila.svg');
     background-size: cover;
     background-position: center;
      /* Отключаем fixed для мобильных устройств */

@@ -173,6 +173,42 @@ p {
     padding-left: 7.5px;
 }
 
+@media (max-width: 430px) {
+  .form_auth_block {
+    position: center;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: url('img/mobila.svg');
+    background-size: cover;
+    background-position: center;
+     /* Отключаем fixed для мобильных устройств */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .form_auth_block{
+    padding: 10px; /* Одинаковый отступ слева и справа */
+    margin: auto;
+    position: absolute;
+    width: 75%; /*75.34884*/
+    height: 447px; /*447*/
+    left: 10%; /*12.325588*/
+    top: 5%;
+    transform: translate(0%, 0%);
+    background-image: url('img/Rectangle_2.svg');
+    border-radius: 30px;
+    /*overflow: hidden;*/
+    display: flex;
+    flex: 1 1 100%;
+    font-family: 'Manrope', sans-serif;
+  
+  }
+  .form_auth_block input{
+    width: 83%;
+  }
+}
+
 ::-webkit-input-placeholder {color:#3f3f44; padding-left: 10px;} 
 ::-moz-placeholder          {color:#3f3f44; padding-left: 10px;} 
 :-moz-placeholder           {color:#3f3f44; padding-left: 10px;}
