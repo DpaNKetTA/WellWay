@@ -167,3 +167,60 @@ html, body {
     scroll-behavior: smooth;
   }
 }
+
+
+
+.account-link {
+  display: inline-block;
+  padding-left: 22px; /* Отступ для иконки */
+  background: url('юзер-2.svg') no-repeat left center;
+  background-size: 18px 18px; /* Размер иконки */
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#review-modal {
+  width: 587.25px;
+  height: 532px;
+  background-color: #fff;
+  background-image: url('prudgect/css/img/Rectangle_2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 22.5px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+
+#close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
