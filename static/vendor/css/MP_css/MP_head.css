@@ -174,7 +174,7 @@ html, body {
   display: inline-block;
   padding-left: 22px; /* Отступ для иконки */
   background: url('user-2.svg') no-repeat left center;
-  background-size: 18px 18px; /* Размер иконки */
+  background-size: 15px 15px; /* Размер иконки */
 }
 
 

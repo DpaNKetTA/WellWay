@@ -358,15 +358,15 @@
         }
     
         #review-modal {
-            width: 380px;
-            height: 399px;
-            border-radius: 16.88px;
+            width: 90%;
+            height: 410px;
+            border-radius: 30px;
             padding: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
     
         .form_auth_block_content {
-            width: 80.1%;
+            width: 90.1%;
         }
     
         .otzyv {
@@ -376,7 +376,7 @@
         .left-otzyv {
             width: 130.5px;
             padding-bottom: 22.5px;
-            padding-right: 52.5px;
+            padding-right: 20px;
         }
     
         .left-otzyv img {
@@ -441,6 +441,7 @@
     
         .image-upload img {
             width: 22.5px;
+            height: 22.5px;
         }
     
         #submit-btn {
@@ -465,7 +466,7 @@
     
         .image-upload {
             bottom: 12.75px;
-            right: 52.5px;
+            right: 25px;
         }
     
         .form-container {
