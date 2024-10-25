@@ -209,7 +209,7 @@ c {
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 430px) {
   .form_auth_block {
     position: center;
     margin: 0;
