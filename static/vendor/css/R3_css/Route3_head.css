@@ -8,7 +8,7 @@ html, body {
 @media (max-width:1920px){
 .hero {
   color:white;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R3/head3.svg');
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R3/head3.png');
   width: 100%;
   background-size: cover;
   display: flex;
@@ -31,7 +31,7 @@ html, body {
 @media (max-width:800px){
   .hero {
     color:white;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R3/head3.svg');
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%,#fffff0 ), url('../../svg/svg_R3/head3.png');
     background-position: center;
     width: 100%;
     background-size: cover;
