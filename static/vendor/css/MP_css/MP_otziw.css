@@ -362,11 +362,11 @@
             height: 399px;
             border-radius: 16.88px;
             padding: 15px;
-            box-shadow: 0 0 11.25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
     
         .form_auth_block_content {
-            width: 60.075%;
+            width: 80.1%;
         }
     
         .otzyv {
@@ -382,6 +382,9 @@
         .left-otzyv img {
             width: 130.5px;
             height: 130.5px;
+        }
+        .right-otzyv {
+            width: calc(100% - 150px); /* Остальное пространство для правой части */    
         }
     
         .input-group {
@@ -403,6 +406,10 @@
         .input-group2 label {
             font-size: 13.5px;
             margin-bottom: 3.75px;
+        }
+        label {
+            margin-bottom: 7.5px;
+            
         }
     
         input, textarea {
