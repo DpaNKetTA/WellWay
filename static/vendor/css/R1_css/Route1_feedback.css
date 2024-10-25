@@ -106,7 +106,7 @@
 
     @media (max-width:800px){
         .feedback {
-          padding-top: 5%;
+          padding-top: 3%;
           padding-bottom: 3%;
           display: flex;
           justify-content: center;
@@ -164,17 +164,17 @@
             border-color: #333 transparent transparent transparent;
         }
         .avatar {
-            margin-left: 1%;
+            margin-left: 0%;
             width: 65px;
             height: 65px;
             border-radius: 50%;
-            overflow: hidden;
+
             flex-shrink: 0; /* Запрещаем сжимать аватар */
 
         }
         .avatar img {
-            width: 45px;
-            height: 45px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;  /* Сделать изображение круглым */
             object-fit: cover;
 
