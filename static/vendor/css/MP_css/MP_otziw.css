@@ -353,73 +353,120 @@
 
 
     @media (max-width: 430px) {
-        /* Заголовок формы авторизации */
         .form_auth_block_head_text {
-            font-size: 20px;
-            padding: 10%;
+            font-size: 22.5px;
         }
     
-        /* Модальное окно */
         #review-modal {
-            width: 90%;
-            height: auto;
+            width: 380px;
+            height: 399px;
+            border-radius: 16.88px;
             padding: 15px;
-            background-size: contain;
+            box-shadow: 0 0 11.25px rgba(0, 0, 0, 0.5);
         }
     
-        /* Блок контента формы авторизации */
         .form_auth_block_content {
-            width: 90%;
+            width: 60.075%;
         }
     
-        /* Левый блок отзыва */
+        .otzyv {
+            padding-bottom: 30px;
+        }
+    
         .left-otzyv {
-            width: 100px;
-            padding-right: 20px;
+            width: 130.5px;
+            padding-bottom: 22.5px;
+            padding-right: 52.5px;
         }
     
         .left-otzyv img {
-            width: 100px;
-            height: 100px;
+            width: 130.5px;
+            height: 130.5px;
         }
     
-        /* Правый блок отзыва */
-        .right-otzyv {
-            width: calc(100% - 120px);
+        .input-group {
+            margin: 15px 0;
         }
     
-        /* Инпуты и текстовые элементы */
-        input, textarea {
-            font-size: 14px;
-            padding: 8px;
+        .input-group11, .input-group12 {
+            margin-bottom: 15px;
+        }
+    
+        .input-group1 {
+            margin-right: 11.25px;
+        }
+    
+        .input-group1 img {
+            width: 22.5px;
         }
     
         .input-group2 label {
-            font-size: 16px;
+            font-size: 13.5px;
+            margin-bottom: 3.75px;
         }
     
-        /* Кнопка отправки отзыва */
-        #submit-btn {
-            font-size: 16px;
-            padding: 8px 15px;
+        input, textarea {
+            padding: 7.5px;
+            font-size: 12px;
         }
     
-        /* Кнопка открытия модального окна */
-        #open-review-btn {
-            width: 100%;
-            height: auto;
-            font-size: 24px;
-            padding: 10px 15px;
+        .dropdown input[type="text"] {
+            width: 187.5px;
+            height: 22.5px;
         }
     
-        /* Иконка закрытия модального окна */
-        #close-modal-btn {
-            font-size: 24px;
+        .dropdown-content div {
+            padding: 7.5px;
         }
-        
-        /* Звездный рейтинг */
+    
+        #impressions {
+            height: 15px;
+            border-radius: 16.88px;
+        }
+    
         .stars label {
-            font-size: 24px;
+            font-size: 26.44px;
+        }
+    
+        .image-upload label {
+            padding: 7.5px;
+        }
+    
+        .image-upload img {
+            width: 22.5px;
+        }
+    
+        #submit-btn {
+            padding: 7.5px 15px;
+            font-size: 13.5px;
+            margin: 15px auto;
+        }
+    
+        #open-review-btn {
+            font-size: 23.63px;
+            padding: 7.5px 15px;
+            border-radius: 16.88px;
+            width: 283.5px;
+            height: 54px;
+        }
+    
+        #close-modal-btn {
+            top: 11.25px;
+            right: 15px;
+            font-size: 22.5px;
+        }
+    
+        .image-upload {
+            bottom: 12.75px;
+            right: 52.5px;
+        }
+    
+        .form-container {
+            gap: 15px;
+        }
+    
+        textarea {
+            padding-top: 7.5px;
         }
     }
     
