@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Зелёные тропы
   </title>
   <link rel="stylesheet" href="/static/vendor/css/R2_css/Route2_head.css">
@@ -129,7 +129,9 @@
 </div>
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-<button id="open-review-btn">Оставить отзыв</button>
+{% if user.is_authenticated %}
+    <button id="open-review-btn">Оставить отзыв</button>
+{% endif %}
 
 <div id="modal-overlay">
     <div id="review-modal">
@@ -252,7 +254,10 @@
 <div class="down">
   <div class="button-container">
       <a href=" {% url 'MainPage' %} " class="button">На главную страницу</a>
-
+        {% if user.is_authenticated %}
+        {% else %}
+      <a href="{% url 'users:login' %} " class="button">Вы еще не можете оставлять отзывы. Войдите в аккаунт</a>
+        {% endif %}
       <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.776646%2C47.248444&mode=routes&rtext=47.252960%2C39.786607~47.243716%2C39.764737~47.245636%2C39.763423~47.246347%2C39.764013~47.248627%2C39.763426~47.248099%2C39.761845~47.246633%2C39.761808~47.244141%2C39.762887~47.243163%2C39.764639~47.252236%2C39.788429~47.250996%2C39.790136~47.253692%2C39.791570~47.253052%2C39.786479&rtt=sc&ruri=~~~~~~~~~~~~&z=16" class="button">Отправиться в путь</a>
   </div>
 

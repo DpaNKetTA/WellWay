@@ -352,7 +352,7 @@
 
 
 
-    @media (max-width: 430px) {
+    @media (max-width: 1300px) {
         /* Заголовок формы авторизации */
         .form_auth_block_head_text {
             font-size: 20px;

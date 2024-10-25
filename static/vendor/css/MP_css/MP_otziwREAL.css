@@ -299,3 +299,18 @@ input, textarea {
         
     }
 
+
+
+
+    @media (max-width: 1300px) {
+        #open-review-btn {
+            padding: 10px 0px;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 15px;
+            width: 283.5px;
+            height: 54px;
+        }
+
+
+    }
